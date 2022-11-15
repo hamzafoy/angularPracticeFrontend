@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WidgetService } from './widgets.service';
 
 @Component({
@@ -6,13 +6,15 @@ import { WidgetService } from './widgets.service';
   templateUrl: './widgets.component.html',
   styleUrls: ['./widgets.component.css']
 })
+
 export class WidgetsComponent implements OnInit {
+
   tools: string[] = [];
   title: string = "Tools used to develop Widgets";
   isValid: boolean = false;
-  onClickMe($event: any) {
-    console.log("Clicked", $event)
-  }
+  // onClickMe($event: any) {
+  //   console.log("Clicked", $event)
+  // }
 
   constructor(widgetService: WidgetService) {
     this.tools = widgetService.getTools();

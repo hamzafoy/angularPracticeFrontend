@@ -1,0 +1,34 @@
+<ng-container *ngIf="rating < 1; else elseBlock">
+    <span (click)="onClick(1)">&#9734;</span>
+</ng-container>
+<ng-template #elseBlock>
+    <span (click)="onClick(1)">&#9733;</span>
+</ng-template>
+
+<ng-container *ngIf="rating < 2; else elseBlock2">
+    <span (click)="onClick(2)">&#9734;</span>
+</ng-container>
+<ng-template #elseBlock2>
+    <span (click)="onClick(2)">&#9733;</span>
+</ng-template>
+
+<ng-container *ngIf="rating < 3; else elseBlock3">
+    <span (click)="onClick(3)">&#9734;</span>
+</ng-container>
+<ng-template #elseBlock3>
+    <span (click)="onClick(3)">&#9733;</span>
+</ng-template>
+
+<ng-container *ngIf="rating < 4; else elseBlock4">
+    <span (click)="onClick(4)">&#9734;</span>
+</ng-container>
+<ng-template #elseBlock4>
+    <span (click)="onClick(4)">&#9733;</span>
+</ng-template>
+
+<ng-container *ngIf="rating < 5; else elseBlock5">
+    <span (click)="onClick(5)">&#9734;</span>
+</ng-container>
+<ng-template #elseBlock5>
+    <span (click)="onClick(5)">&#9733;</span>
+</ng-template>

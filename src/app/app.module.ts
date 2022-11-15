@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { WidgetService } from './widgets/widgets.service';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WidgetsComponent
+    WidgetsComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule
