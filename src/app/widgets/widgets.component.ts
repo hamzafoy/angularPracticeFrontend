@@ -9,6 +9,10 @@ import { WidgetService } from './widgets.service';
 export class WidgetsComponent implements OnInit {
   tools: string[] = [];
   title: string = "Tools used to develop Widgets";
+  isValid: boolean = false;
+  onClickMe($event: any) {
+    console.log("Clicked", $event)
+  }
 
   constructor(widgetService: WidgetService) {
     this.tools = widgetService.getTools();
