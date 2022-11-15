@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WidgetService } from './widgets.service';
 
 @Component({
   selector: 'app-widgets',
@@ -6,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./widgets.component.css']
 })
 export class WidgetsComponent implements OnInit {
+  tools: string[] = [];
+  title: string = "Tools used to develop Widgets";
 
-  tools: string[] = ["Angular", ".NET", "SQL"]
-  title: string = "Tools used to develop Widgets"
-
-  constructor() { }
+  constructor(widgetService: WidgetService) {
+    this.tools = widgetService.getTools();
+   }
 
   ngOnInit(): void {
   }
