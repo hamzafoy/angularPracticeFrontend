@@ -8,8 +8,14 @@
     </li>
 </ul>
 
-<button
+<ul>
+    <div *ngFor="let widg of widgets">
+        <app-widget [data]="widg"></app-widget>
+    </div>
+</ul>
+
+<!-- <button
 class="btn btn-primary"
-> <!-- (click)="onClickMe($event)" -->
+> (click)="onClickMe($event)" 
     Create Widget
-</button>
+</button> -->
