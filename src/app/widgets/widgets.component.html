@@ -8,11 +8,21 @@
     </li>
 </ul>
 
-<ul>
-    <div *ngFor="let widg of widgets">
-        <app-widget [data]="widg"></app-widget>
+<div *ngIf="widgets.length > 0; else loading">
+
+
+    <ul>
+        <div *ngFor="let widg of widgets">
+            <app-widget [data]="widg"></app-widget>
+        </div>
+    </ul>
+
+</div>
+<ng-template #loading>
+    <div>
+        No Widgets to Display!
     </div>
-</ul>
+</ng-template>
 
 <!-- <button
 class="btn btn-primary"
